@@ -1,0 +1,22 @@
+---
+layout: default
+---
+{% assign L = page.lang | default: "en" %}
+<article>
+  <header class="post-header">
+    <div class="wrap">
+      <div class="date">{% if L == "es" %}{{ page.date | date: "%-d/%-m/%Y" }}{% else %}{{ page.date | date: "%B %-d, %Y" }}{% endif %}</div>
+      <h1>{{ page.title }}</h1>
+      {% if page.tags %}
+      <div style="margin-top:14px;">
+        {% for t in page.tags %}<span class="tag">{{ t }}</span>{% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </header>
+  <div class="post-body">
+    <div class="wrap">
+      {{ content }}
+    </div>
+  </div>
+</article>

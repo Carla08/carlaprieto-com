@@ -1,0 +1,34 @@
+---
+layout: default
+lang: es
+title: Blog
+permalink: /es/blog/
+description: Notas sobre construir Yoseph AI, inmigración y machine learning.
+en_url: /blog/
+---
+
+<header class="page-header" style="padding-bottom:36px;">
+  <div class="wrap">
+    <div class="kicker" style="color:var(--gold);">Blog</div>
+    <h1>Notas de Carla</h1>
+    <p class="lede">El progreso de Yoseph, lo que aprendí navegando mi propia visa, y notas técnicas de machine learning.</p>
+  </div>
+</header>
+
+<section class="block">
+  <div class="wrap">
+    {% assign es_posts = site.posts | where: "lang", "es" %}
+    {% for post in es_posts %}
+    <div class="post-list-item">
+      <div class="date">{{ post.date | date: "%-d/%-m/%Y" }}</div>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      {% if post.tags %}
+      <div style="margin-bottom:8px;">
+        {% for t in post.tags %}<span class="tag">{{ t }}</span>{% endfor %}
+      </div>
+      {% endif %}
+      <p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 32 }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>

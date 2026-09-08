@@ -1,0 +1,17 @@
+title: Carla Prieto
+description: "Fundadora de Yoseph AI. Ingeniera ML."
+url: "https://carlaprieto.com"
+baseurl: ""
+
+permalink: /blog/:year/:month/:day/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+exclude:
+  - README.md
