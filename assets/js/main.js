@@ -8,6 +8,13 @@
   }
 
   function animatedScrollTo(targetY, duration) {
+    // If the tab is backgrounded, requestAnimationFrame gets throttled or
+    // paused by the browser, which can stall the animation. Skip straight
+    // to an instant scroll in that case so navigation always works.
+    if (document.hidden) {
+      window.scrollTo(0, targetY);
+      return;
+    }
     var startY = window.pageYOffset;
     var distance = targetY - startY;
     var startTime = null;
