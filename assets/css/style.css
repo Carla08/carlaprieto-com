@@ -340,8 +340,9 @@ img{ max-width:100%; }
   .panel-split{ flex-direction:column; }
   .panel-split .panel-meta{ border-left:none; border-top:1px solid var(--line); padding-left:0; padding-top:24px; flex-direction:row; flex-wrap:wrap; }
   .section{ padding:72px 0; }
-  .hero-photo-wrap{ width:min(360px, 84vw); }
-  .hero-photo-wrap img{ height:420px; }
+  .hero-section{ padding:48px 0; }
+  .hero-photo-wrap{ width:min(240px, 62vw); }
+  .hero-photo-wrap img{ height:290px; }
   .full-overlay-inner{ padding-top:88px; }
 }
 
@@ -356,9 +357,10 @@ img{ max-width:100%; }
   .role-line{ font-size:1.2rem; }
   .cta-row{ flex-direction:column; align-items:stretch; }
   .cta-row .btn{ justify-content:center; }
-  .hero-photo-wrap{ width:min(300px, 80vw); }
-  .hero-photo-wrap img{ height:340px; }
+  .hero-photo-wrap{ width:min(190px, 56vw); }
+  .hero-photo-wrap img{ height:230px; }
   .section{ padding:56px 0; min-height:auto; }
+  .hero-section{ padding:40px 0; }
   .section-head h2{ font-size:1.7rem; }
   .panel{ border-radius:22px; padding:24px; }
   .panel h3{ font-size:1.5rem; }
