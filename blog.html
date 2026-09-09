@@ -1,34 +1,15 @@
 ---
-layout: default
-lang: en
-title: Blog
 permalink: /blog/
-description: Notes on building Yoseph AI, immigration, and machine learning.
-es_url: /es/blog/
 ---
-
-<header class="page-header" style="padding-bottom:36px;">
-  <div class="wrap">
-    <div class="kicker" style="color:var(--gold);">Blog</div>
-    <h1>Notes from Carla</h1>
-    <p class="lede">Yoseph's progress, what I learned navigating my own visa, and technical notes on machine learning.</p>
-  </div>
-</header>
-
-<section class="block">
-  <div class="wrap">
-    {% assign en_posts = site.posts | where: "lang", "en" %}
-    {% for post in en_posts %}
-    <div class="post-list-item">
-      <div class="date">{{ post.date | date: "%B %-d, %Y" }}</div>
-      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-      {% if post.tags %}
-      <div style="margin-bottom:8px;">
-        {% for t in post.tags %}<span class="tag">{{ t }}</span>{% endfor %}
-      </div>
-      {% endif %}
-      <p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 32 }}</p>
-    </div>
-    {% endfor %}
-  </div>
-</section>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="refresh" content="0; url={{ '/#blog' | relative_url }}">
+<link rel="canonical" href="{{ '/#blog' | relative_url }}">
+<title>Redirecting…</title>
+</head>
+<body>
+<p>This page moved. Redirecting to <a href="{{ '/#blog' | relative_url }}">carlaprieto.com/#blog</a>…</p>
+</body>
+</html>
