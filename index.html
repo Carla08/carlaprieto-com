@@ -2,15 +2,20 @@
 layout: default
 lang: en
 title: Carla Prieto
-description: Founder of Yoseph AI. ML Engineer. LegalTech.
+description: Founder of Yoseph AI. AI Engineer. LegalTech.
 es_url: /es/
 ---
 
 <section class="section hero-section" id="home">
   <div class="wrap">
+    <div class="hero-photo-wrap">
+      <div class="blob-behind-a"></div>
+      <div class="blob-behind-b"></div>
+      <img src="{{ '/assets/images/carla.jpg' | relative_url }}" alt="Carla Prieto">
+    </div>
     <div class="hero-text">
       <div class="tag-row">
-        <span class="hero-tag">ML Engineer</span>
+        <span class="hero-tag">AI Engineer</span>
         <span class="hero-tag">LegalTech</span>
       </div>
       <h1>Carla Prieto</h1>
@@ -21,11 +26,6 @@ es_url: /es/
         <a class="btn btn-solid" href="https://yoseph.ai" target="_blank" rel="noopener">Visit Yoseph AI &rarr;</a>
         <a class="btn btn-outline" href="#blog">Read the blog</a>
       </div>
-    </div>
-    <div class="hero-photo-wrap">
-      <div class="blob-behind-a"></div>
-      <div class="blob-behind-b"></div>
-      <img src="{{ '/assets/images/carla.jpg' | relative_url }}" alt="Carla Prieto">
     </div>
   </div>
 
@@ -60,44 +60,84 @@ es_url: /es/
     <div class="section-head">
       <div class="kicker">My background</div>
       <h2>Education &amp; experience</h2>
-      <p>Ten years in tech, most recently focused on ML systems and LLMs. Full detail is in the resume below.</p>
+      <p>I'm currently building Yoseph AI as founder, finishing my MSEI at USF, with 10 years in tech and roots in Chihuahua, Mexico.</p>
     </div>
 
-    <div class="edu-list">
-      <div class="edu-item">
-        <div class="when mono">2026&ndash;2027</div>
-        <div>
-          <div class="school">University of San Francisco</div>
-          <div class="degree">MSEI, Master of Science in Entrepreneurship and Innovation (in progress)</div>
+    <div class="tabs" role="tablist">
+      <button class="tab-btn active" type="button" data-tab="education" role="tab" aria-selected="true">Education</button>
+      <button class="tab-btn" type="button" data-tab="experience" role="tab" aria-selected="false">Experience</button>
+    </div>
+
+    <div class="tab-panel" data-panel="education">
+      <div class="edu-list">
+        <div class="edu-item">
+          <div class="when mono">2026&ndash;2027</div>
+          <div>
+            <div class="school">University of San Francisco</div>
+            <div class="degree">MSEI, Master of Science in Entrepreneurship and Innovation (in progress)</div>
+          </div>
+        </div>
+        <div class="edu-item">
+          <div class="when mono">2024</div>
+          <div>
+            <div class="school">UC Berkeley</div>
+            <div class="degree">MIDS, Master of Information and Data Science</div>
+          </div>
+        </div>
+        <div class="edu-item">
+          <div class="when mono">2016</div>
+          <div>
+            <div class="school">Tecnológico de Monterrey (ITESM)</div>
+            <div class="degree">B.S. Engineering in Information and Communication Technologies</div>
+          </div>
         </div>
       </div>
-      <div class="edu-item">
-        <div class="when mono">2024</div>
-        <div>
-          <div class="school">UC Berkeley</div>
-          <div class="degree">MIDS, Master of Information and Data Science</div>
-        </div>
-      </div>
-      <div class="edu-item">
-        <div class="when mono">2016</div>
-        <div>
-          <div class="school">Tecnológico de Monterrey (ITESM)</div>
-          <div class="degree">B.S. Engineering in Information and Communication Technologies</div>
-        </div>
+
+      <div class="resume-block">
+        <p>Full work history, tools, and references.</p>
+        <a class="btn btn-outline" href="{{ '/assets/resume.pdf' | relative_url }}" target="_blank">Download Resume (PDF)</a>
       </div>
     </div>
 
-    <div class="resume-block">
-      <p>Full work history, tools, and references.</p>
-      <a class="btn btn-outline" href="{{ '/assets/resume.pdf' | relative_url }}" target="_blank">Download Resume (PDF)</a>
+    <div class="tab-panel" data-panel="experience" hidden>
+      <div class="exp-list exp-preview">
+        <div class="exp-item">
+          <div class="when mono">2026&ndash;present</div>
+          <div>
+            <div class="role"><span class="company">Yoseph AI</span>, Founder</div>
+            <div class="achievement">Building an AI copilot for migrants navigating the U.S. immigration system.</div>
+          </div>
+        </div>
+        <div class="exp-item">
+          <div class="when mono">2025&ndash;2026</div>
+          <div>
+            <div class="role"><span class="company">Subbase</span>, AI Engineer</div>
+            <div class="achievement">LLM-based document extraction.</div>
+          </div>
+        </div>
+      </div>
+      <button class="see-more-btn" type="button" data-overlay-target="experience-overlay">See full experience &rarr;</button>
     </div>
+  </div>
+</section>
 
-    <div class="subsection-gap">
-      <div class="kicker">Ten years, six roles</div>
-      <h3 style="font-size:1.5rem; margin-bottom:8px;">Roles through the years</h3>
-    </div>
+<div class="full-overlay" id="experience-overlay" hidden>
+  <div class="full-overlay-inner">
+    <button class="overlay-close" type="button" aria-label="Back to background">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      Back
+    </button>
+    <div class="kicker">Full experience</div>
+    <h2>Ten years, seven roles</h2>
 
     <div class="exp-list">
+      <div class="exp-item">
+        <div class="when mono">2026&ndash;present</div>
+        <div>
+          <div class="role"><span class="company">Yoseph AI</span>, Founder</div>
+          <div class="achievement">Building an AI copilot for migrants navigating the U.S. immigration system.</div>
+        </div>
+      </div>
       <div class="exp-item">
         <div class="when mono">2025&ndash;2026</div>
         <div>
@@ -141,8 +181,12 @@ es_url: /es/
         </div>
       </div>
     </div>
+
+    <div class="resume-cta">
+      <a class="btn btn-solid" href="{{ '/assets/resume.pdf' | relative_url }}" target="_blank">Download Resume (PDF)</a>
+    </div>
   </div>
-</section>
+</div>
 
 <section class="section" id="projects">
   <div class="wrap">

@@ -2,16 +2,21 @@
 layout: default
 lang: es
 title: Carla Prieto
-description: Fundadora de Yoseph AI. Ingeniera ML. LegalTech.
+description: Fundadora de Yoseph AI. Ingeniera de IA. LegalTech.
 en_url: /
 permalink: /es/
 ---
 
 <section class="section hero-section" id="home">
   <div class="wrap">
+    <div class="hero-photo-wrap">
+      <div class="blob-behind-a"></div>
+      <div class="blob-behind-b"></div>
+      <img src="{{ '/assets/images/carla.jpg' | relative_url }}" alt="Carla Prieto">
+    </div>
     <div class="hero-text">
       <div class="tag-row">
-        <span class="hero-tag">Ingeniera ML</span>
+        <span class="hero-tag">Ingeniera de IA</span>
         <span class="hero-tag">LegalTech</span>
       </div>
       <h1>Carla Prieto</h1>
@@ -22,11 +27,6 @@ permalink: /es/
         <a class="btn btn-solid" href="https://yoseph.ai" target="_blank" rel="noopener">Visitar Yoseph AI &rarr;</a>
         <a class="btn btn-outline" href="#blog">Leer el blog</a>
       </div>
-    </div>
-    <div class="hero-photo-wrap">
-      <div class="blob-behind-a"></div>
-      <div class="blob-behind-b"></div>
-      <img src="{{ '/assets/images/carla.jpg' | relative_url }}" alt="Carla Prieto">
     </div>
   </div>
 
@@ -61,44 +61,84 @@ permalink: /es/
     <div class="section-head">
       <div class="kicker">Mi trayectoria</div>
       <h2>Educación y experiencia</h2>
-      <p>Diez años en tecnología, enfocados últimamente en sistemas de ML y LLMs. El detalle completo está en el currículum de abajo.</p>
+      <p>Actualmente construyo Yoseph AI como fundadora, termino mi MSEI en USF, con 10 años en tecnología y raíces en Chihuahua, México.</p>
     </div>
 
-    <div class="edu-list">
-      <div class="edu-item">
-        <div class="when mono">2026&ndash;2027</div>
-        <div>
-          <div class="school">University of San Francisco</div>
-          <div class="degree">MSEI, Master of Science in Entrepreneurship and Innovation (en curso)</div>
+    <div class="tabs" role="tablist">
+      <button class="tab-btn active" type="button" data-tab="education" role="tab" aria-selected="true">Educación</button>
+      <button class="tab-btn" type="button" data-tab="experience" role="tab" aria-selected="false">Experiencia</button>
+    </div>
+
+    <div class="tab-panel" data-panel="education">
+      <div class="edu-list">
+        <div class="edu-item">
+          <div class="when mono">2026&ndash;2027</div>
+          <div>
+            <div class="school">University of San Francisco</div>
+            <div class="degree">MSEI, Master of Science in Entrepreneurship and Innovation (en curso)</div>
+          </div>
+        </div>
+        <div class="edu-item">
+          <div class="when mono">2024</div>
+          <div>
+            <div class="school">UC Berkeley</div>
+            <div class="degree">MIDS, Master in Information and Data Science</div>
+          </div>
+        </div>
+        <div class="edu-item">
+          <div class="when mono">2016</div>
+          <div>
+            <div class="school">Tecnológico de Monterrey (ITESM)</div>
+            <div class="degree">Ingeniería en Tecnologías de Información y Comunicación</div>
+          </div>
         </div>
       </div>
-      <div class="edu-item">
-        <div class="when mono">2024</div>
-        <div>
-          <div class="school">UC Berkeley</div>
-          <div class="degree">MIDS, Master in Information and Data Science</div>
-        </div>
-      </div>
-      <div class="edu-item">
-        <div class="when mono">2016</div>
-        <div>
-          <div class="school">Tecnológico de Monterrey (ITESM)</div>
-          <div class="degree">Ingeniería en Tecnologías de Información y Comunicación</div>
-        </div>
+
+      <div class="resume-block">
+        <p>Historial completo, herramientas y referencias.</p>
+        <a class="btn btn-outline" href="{{ '/assets/resume.pdf' | relative_url }}" target="_blank">Descargar CV (PDF)</a>
       </div>
     </div>
 
-    <div class="resume-block">
-      <p>Historial completo, herramientas y referencias.</p>
-      <a class="btn btn-outline" href="{{ '/assets/resume.pdf' | relative_url }}" target="_blank">Descargar CV (PDF)</a>
+    <div class="tab-panel" data-panel="experience" hidden>
+      <div class="exp-list exp-preview">
+        <div class="exp-item">
+          <div class="when mono">2026&ndash;presente</div>
+          <div>
+            <div class="role"><span class="company">Yoseph AI</span>, Fundadora</div>
+            <div class="achievement">Construyendo un copiloto de IA para migrantes navegando el sistema de inmigración de EE.UU.</div>
+          </div>
+        </div>
+        <div class="exp-item">
+          <div class="when mono">2025&ndash;2026</div>
+          <div>
+            <div class="role"><span class="company">Subbase</span>, AI Engineer</div>
+            <div class="achievement">Extracción de datos de documentos con LLMs.</div>
+          </div>
+        </div>
+      </div>
+      <button class="see-more-btn" type="button" data-overlay-target="experience-overlay">Ver experiencia completa &rarr;</button>
     </div>
+  </div>
+</section>
 
-    <div class="subsection-gap">
-      <div class="kicker">Diez años, seis roles</div>
-      <h3 style="font-size:1.5rem; margin-bottom:8px;">Roles a través de los años</h3>
-    </div>
+<div class="full-overlay" id="experience-overlay" hidden>
+  <div class="full-overlay-inner">
+    <button class="overlay-close" type="button" aria-label="Volver a mi trayectoria">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      Volver
+    </button>
+    <div class="kicker">Experiencia completa</div>
+    <h2>Diez años, siete roles</h2>
 
     <div class="exp-list">
+      <div class="exp-item">
+        <div class="when mono">2026&ndash;presente</div>
+        <div>
+          <div class="role"><span class="company">Yoseph AI</span>, Fundadora</div>
+          <div class="achievement">Construyendo un copiloto de IA para migrantes navegando el sistema de inmigración de EE.UU.</div>
+        </div>
+      </div>
       <div class="exp-item">
         <div class="when mono">2025&ndash;2026</div>
         <div>
@@ -142,8 +182,12 @@ permalink: /es/
         </div>
       </div>
     </div>
+
+    <div class="resume-cta">
+      <a class="btn btn-solid" href="{{ '/assets/resume.pdf' | relative_url }}" target="_blank">Descargar CV (PDF)</a>
+    </div>
   </div>
-</section>
+</div>
 
 <section class="section" id="projects">
   <div class="wrap">

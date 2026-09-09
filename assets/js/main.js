@@ -67,6 +67,51 @@
       }, 60);
     }
 
+    // Background section: Education / Experience tabs.
+    document.querySelectorAll(".tabs").forEach(function (tabGroup) {
+      var buttons = tabGroup.querySelectorAll(".tab-btn");
+      var container = tabGroup.parentElement;
+      buttons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var target = btn.getAttribute("data-tab");
+          buttons.forEach(function (b) {
+            b.classList.toggle("active", b === btn);
+            b.setAttribute("aria-selected", b === btn ? "true" : "false");
+          });
+          container.querySelectorAll(".tab-panel").forEach(function (panel) {
+            panel.hidden = panel.getAttribute("data-panel") !== target;
+          });
+        });
+      });
+    });
+
+    // "See more" full-page experience overlay.
+    document.querySelectorAll(".see-more-btn").forEach(function (btn) {
+      var overlayId = btn.getAttribute("data-overlay-target");
+      var overlay = overlayId ? document.getElementById(overlayId) : null;
+      if (!overlay) return;
+      btn.addEventListener("click", function () {
+        overlay.hidden = false;
+        document.body.style.overflow = "hidden";
+        window.requestAnimationFrame(function () {
+          overlay.classList.add("is-open");
+        });
+      });
+    });
+    document.querySelectorAll(".overlay-close").forEach(function (btn) {
+      var overlay = btn.closest(".full-overlay");
+      function close() {
+        if (!overlay) return;
+        overlay.classList.remove("is-open");
+        document.body.style.overflow = "";
+        window.setTimeout(function () { overlay.hidden = true; }, 320);
+      }
+      btn.addEventListener("click", close);
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && overlay && !overlay.hidden) close();
+      });
+    });
+
     // Active nav-link highlighting via IntersectionObserver.
     var sections = document.querySelectorAll("main .section[id]");
     var navLinks = document.querySelectorAll(".site-nav .links a[href*='#']");
