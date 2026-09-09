@@ -84,7 +84,7 @@ code, .mono{ font-family:'IBM Plex Mono', monospace; }
 /* ---------- Buttons ---------- */
 .btn{
   display:inline-flex; align-items:center; gap:8px;
-  padding:12px 26px; border-radius:999px;
+  padding:12px 26px; border-radius:10px;
   font-size:14.5px; font-weight:500; font-family:'IBM Plex Sans', sans-serif;
   border:1.5px solid transparent; transition:transform .15s ease, background .15s ease, color .15s ease;
 }
@@ -110,7 +110,7 @@ code, .mono{ font-family:'IBM Plex Mono', monospace; }
 .section-head h2{ font-size:clamp(2rem, 4vw, 2.7rem); }
 
 /* ---------- Hero (home) ---------- */
-.hero-section .wrap{
+.hero-section > .wrap:first-child{
   display:flex; gap:64px; align-items:center; flex-wrap:wrap-reverse;
 }
 .hero-text{ flex:1 1 420px; min-width:300px; }
