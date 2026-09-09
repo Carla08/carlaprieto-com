@@ -14,6 +14,7 @@
 
 *{ box-sizing:border-box; }
 html{ scroll-behavior:auto; }
+html, body{ overflow-x:hidden; max-width:100%; }
 body{
   margin:0;
   background:var(--ivory);
@@ -94,9 +95,10 @@ code, .mono{ font-family:'IBM Plex Mono', monospace; }
 
 /* ---------- Sections: one flowing large page ---------- */
 .section{
-  min-height:100vh; display:flex; align-items:center; padding:96px 0;
+  min-height:100vh; display:flex; flex-direction:column; justify-content:center; padding:96px 0;
   border-bottom:1px solid var(--line);
   scroll-margin-top:70px;
+  overflow:hidden;
 }
 .section:last-of-type{ border-bottom:none; }
 .section > .wrap{ width:100%; }
