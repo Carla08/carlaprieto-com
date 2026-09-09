@@ -19,6 +19,10 @@ html{ scroll-behavior:auto; }
 body{
   margin:0;
   background-color:var(--ivory);
+  background-image:url('../images/bg-atmosphere.jpg');
+  background-repeat:repeat-y;
+  background-position:top center;
+  background-size:100% auto;
   color:var(--charcoal);
   font-family:'IBM Plex Sans', system-ui, -apple-system, sans-serif;
   line-height:1.65;
@@ -111,20 +115,7 @@ img{ max-width:100%; }
   overflow:hidden;
 }
 .section:last-of-type{ border-bottom:none; }
-/* Each section gets its own single, uncropped copy of the atmosphere art
-   (no tiling) so there is never a repeat seam, on any screen size. */
-.section::before{
-  content:"";
-  position:absolute; inset:0; z-index:0;
-  background-image:
-    linear-gradient(rgba(250,249,244,0.32), rgba(250,249,244,0.32)),
-    url('../images/bg-atmosphere.jpg');
-  background-repeat:no-repeat, no-repeat;
-  background-position:center, center;
-  background-size:cover, cover;
-  pointer-events:none;
-}
-.section > .wrap{ position:relative; z-index:1; width:100%; }
+.section > .wrap{ width:100%; }
 .section-head{ margin-bottom:44px; }
 .section-head p{ font-size:1.05rem; }
 .kicker{
