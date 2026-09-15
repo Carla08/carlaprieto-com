@@ -262,6 +262,26 @@ img{ max-width:100%; }
 }
 .resume-block p{ margin:0; font-size:14.5px; color:var(--muted); }
 
+/* ---------- Background: two-column layout ---------- */
+.background-grid{
+  display:grid; grid-template-columns:1.15fr 0.85fr; gap:56px; align-items:start;
+  margin-top:8px;
+}
+.background-col .col-heading{
+  font-family:'IBM Plex Mono', monospace; font-size:12px; text-transform:uppercase;
+  letter-spacing:0.06em; color:var(--fern); margin-bottom:4px;
+}
+.background-col .edu-list, .background-col .exp-list{ margin-top:4px; }
+
+.exp-condensed{ margin-top:4px; }
+.exp-row{
+  display:grid; grid-template-columns:96px 1fr; gap:14px;
+  padding:10px 0; border-top:1px solid var(--line);
+  font-size:13.5px; color:var(--muted);
+}
+.exp-row .when{ font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--muted); }
+.exp-row .company{ color:var(--evergreen); font-weight:700; }
+
 .subsection-gap{ margin-top:64px; }
 
 /* ---------- Projects ---------- */
@@ -337,6 +357,8 @@ img{ max-width:100%; }
 /* ---------- Responsive ---------- */
 @media (max-width:760px){
   .edu-item, .exp-item{ grid-template-columns:1fr; gap:6px; }
+  .background-grid{ grid-template-columns:1fr; gap:40px; }
+  .exp-row{ grid-template-columns:1fr; gap:2px; }
   .site-nav .links{ gap:16px; }
   .panel-split{ flex-direction:column; }
   .panel-split .panel-meta{ border-left:none; border-top:1px solid var(--line); padding-left:0; padding-top:24px; flex-direction:row; flex-wrap:wrap; }
